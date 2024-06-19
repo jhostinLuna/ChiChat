@@ -2,28 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/chatListFragment">
+    app:startDestination="@id/contactsListFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.team2.chitchat.ui.login.LoginFragment"
         android:label="LoginFragment" />
-
-    <fragment
-        android:id="@+id/chatListFragment"
-        android:name="com.team2.chitchat.ui.chatlist.ChatListFragment"
-        android:label="ChatListFragment">
-
-        <action
-            android:id="@+id/action_chatListFragment_to_contactsListFragment"
-            app:destination="@id/contactsListFragment" />
-
-        <action
-            android:id="@+id/action_contactsListFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:popUpTo="@id/contactsListFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
 
     <fragment
         android:id="@+id/contactsListFragment"

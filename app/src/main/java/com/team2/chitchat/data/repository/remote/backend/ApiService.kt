@@ -2,8 +2,6 @@ package com.team2.chitchat.data.repository.remote.backend
 
 import com.team2.chitchat.data.repository.remote.request.users.LoginUserRequest
 import com.team2.chitchat.data.repository.remote.request.users.RegisterUserRequest
-import com.team2.chitchat.data.repository.remote.response.chats.GetChatsResponse
-import com.team2.chitchat.data.repository.remote.response.messages.GetMessagesResponse
 import com.team2.chitchat.data.repository.remote.response.users.GetUserResponse
 import com.team2.chitchat.data.repository.remote.response.users.PostLoginResponse
 import com.team2.chitchat.data.repository.remote.response.users.PostRegisterResponse
@@ -28,12 +26,4 @@ interface ApiService {
     //ContactsList
     @GET("api/users")
     suspend fun getContactsList(): Response<ArrayList<GetUserResponse>>
-
-    //Chats
-    @GET("api/chats")
-    suspend fun getChats(): Response<ArrayList<GetChatsResponse>>
-
-    //Message
-    @GET("api/messages")
-    suspend fun getMessages(): Response<ArrayList<GetMessagesResponse>>
 }
